@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.4"
+        android:focusable="false">
+
+        <ImageView
+            android:id="@+id/img_first"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/back_image" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image1"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center|bottom"
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/logo_main_icon"
+            app:civ_border_color="#ffffff"
+            app:civ_border_width="10dp" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SIGN IN"
+                android:textColor="#EDB354"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/rect"
+                    android:padding="7dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/emailid"
+                    android:tint="@android:color/white" />
+
+                <EditText
+                    android:layout_width="230dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/rectangle"
+                    android:cursorVisible="false"
+                    android:gravity="center_vertical"
+                    android:hint=" Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#4B6674"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/rect"
+                    android:padding="9dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/open_lock" />
+
+                <EditText
+                    android:layout_width="230dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/rectangle"
+                    android:cursorVisible="false"
+                    android:gravity="center_vertical"
+                    android:hint=" Password"
+                    android:inputType="textPassword"
+                    android:textColor="#4B6674"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:text="Forgut Your Password?"
+                android:textColor="#EDB354"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button"
+                android:text="SIGN IN"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Create your account?"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableBottom="@drawable/line"
+                    android:text=" Sign Up"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#E87070"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
