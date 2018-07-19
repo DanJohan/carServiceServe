@@ -83,6 +83,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:hint="+91"
+                android:id="@+id/code"
                 android:textColor="#000000"
                 android:textSize="15sp" />
 
@@ -92,6 +93,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:hint="123456789"
+                android:id="@+id/number"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -100,6 +102,8 @@
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:text="Submit"
+            android:id="@+id/submit"
+            android:background="@color/colorPrimaryDark"
             android:textColor="#ffffff"
             android:textSize="15sp" />
     </LinearLayout>
