@@ -5,15 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
+import com.facebook.FacebookActivity;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -22,19 +27,26 @@ import org.json.JSONObject;
 
 import java.util.Arrays;
 
-public class SignInActivity extends AppCompatActivity {
+import static android.provider.ContactsContract.Intents.Insert.EMAIL;
+
+public class FacebookIntegration extends AppCompatActivity {
+  //  private static final String EMAIL = "email";
+  private TextView info;
+
+   // LoginButton loginButton;
     private static final String EMAIL = "email";
     private CallbackManager callbackManager;
     private AccessToken mAccessToken;
-    LoginButton loginButton;
+     LoginButton loginButton;
     // Button logout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_facebook_integration);
         callbackManager = CallbackManager.Factory.create();
-
+        info = (TextView) findViewById(R.id.info);
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,7 +110,6 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
