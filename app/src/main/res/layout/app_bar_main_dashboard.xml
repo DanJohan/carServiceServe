@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.car.carserviceserve.MainDashboardActivity">
+    tools:context="com.car.revive.MainDashboardActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -14,9 +15,42 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+            app:theme="@style/ToolbarColoredBackArrow"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Dashboard"
+
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                />
+            <!--<ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:tint="@color/white"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+
+               android:src="@drawable/notification"/>-->
+            <com.richpath.RichPathView
+                android:id="@+id/notification_bell"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="end"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:vector="@drawable/vector" />
+            <ImageView
+                android:layout_width="20dp"
+                android:id="@+id/dot_icon"
+                android:src="@drawable/red_circle"
+                android:layout_height="20dp" />
+        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 

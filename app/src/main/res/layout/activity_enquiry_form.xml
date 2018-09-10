@@ -2,346 +2,385 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="5dp"
-    android:weightSum="1">
-
-    <FrameLayout
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:orientation="horizontal"
+        android:background="@color/dark_pink"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="0.4"
-        android:background="@drawable/bg_tranparent_image"
-        android:focusable="false">
-
-        <ImageView
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:id="@+id/back"
+           android:text="Back"
+           android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+        <TextView
+            android:text="Car Enquiry"
+            android:textSize="15sp"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/back_image" />
-
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center|bottom"
-            android:backgroundTint="@android:color/white"
-            android:src="@drawable/logo_main_icon"
-            app:civ_border_color="#ffffff"
-            app:civ_border_width="10dp" />
-    </FrameLayout>
-
-    <ScrollView
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="0.6"
-        android:background="@drawable/bg_tranparent_image">
-
-        <LinearLayout
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:orientation="vertical">
-
+            android:layout_height="0dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Choose a date"
-                    android:textColor="#3c3c3c"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                android:orientation="vertical">
 
                 <RelativeLayout
+                    android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/edit_text_border">
+                    android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="center"
-                        android:text="16/09/2015"
-                        android:textColor="#979393" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/tx1"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:padding="5dp"
-                        android:src="@drawable/date" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Choose a Date"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="15sp" />
 
+                    <RelativeLayout
+                        android:layout_toEndOf="@+id/tx1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/calender"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="16/09/2015"
+                            android:textColor="@color/black"
+                            android:id="@+id/calender_txt" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:padding="5dp"
+                            android:tint="@color/dark_pink"
+                            android:src="@drawable/date" />
+                        <View
+                            android:layout_below="@+id/calender_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/dark_pink"/>
+                    </RelativeLayout>
                 </RelativeLayout>
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Car Name"
-                    android:textColor="#3c3c3c"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/edit_text_border">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="center"
-                        android:text="Choose a car name"
-                        android:textColor="#979393" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:padding="5dp"
-                        android:src="@drawable/select" />
+                        android:layout_marginLeft="10dp"
+                        android:text="Location"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="15sp" />
 
-                </RelativeLayout>
-            </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                        <Spinner
+                            android:id="@+id/location_spinner"
+                            android:layout_width="fill_parent"
+                            style="@style/spinner_style"
+                            android:layout_height="wrap_content"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
 
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Model Name"
-                    android:textColor="#3c3c3c"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-
-                <EditText
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/edit_text_border"
-                    android:hint="Enter model name"
-                    android:paddingLeft="5dp"
-                    android:textColor="#979393"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Car Color"
-                    android:textColor="#3c3c3c"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/edit_text_border">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="center"
-                        android:text="Choose color"
-                        android:textColor="#979393" />
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Car Pickup Time"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="15sp" />
 
-                    <ImageView
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        >
+
+                        <Spinner
+                            android:id="@+id/time_spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/spinner_style"
+                            />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Address"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="15sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:hint="Enter your address"
+                            android:background="@android:color/transparent"
+                            android:paddingLeft="5dp"
+                            android:id="@+id/address"
+
+                            android:textSize="13sp" />
+                        <View
+                            android:layout_below="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/dark_pink"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Need Loaner vehicle ?"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"
+                       style="@style/radionbutton"
+                        android:drawablePadding="10dp"
+                        android:buttonTint="@color/dark_pink"
+                        android:text=" Yes"
+                        android:textColor="@color/dark_pink"
+                        android:checked="true"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                       style="@style/radionbutton"
+                        android:textColor="@color/dark_pink"
+                        android:padding="7dp"
+                        android:buttonTint="@color/dark_pink"
+                        android:checked="false"
+                        android:text="No"
+                        android:textSize="13sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Choose Your Service"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/painting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:padding="4dp"
+                        android:checked="true"
+                        android:buttonTint="@color/dark_pink"
+                        android:text="Painting"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="13sp" />
+
+                    <CheckBox
+                        android:id="@+id/denting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="false"
+
+                        android:padding="3dp"
+                        android:buttonTint="@color/dark_pink"
+                        android:text="Denting"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Car Comments"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="15sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@android:color/transparent"
+                            android:paddingLeft="5dp"
+                            android:hint="Enter your comments"
+                            android:id="@+id/enquiry"
+                            android:textSize="13sp"
+                         />
+                        <View
+                            android:layout_below="@+id/enquiry"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/dark_pink"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Upload your services images"
+                        android:textColor="@color/dark_pink"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
                         android:padding="5dp"
-                        android:src="@drawable/select" />
-
-                </RelativeLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                        android:tint="@color/dark_pink"
+                        android:id="@+id/click"
+                        android:src="@drawable/upload" />
 
 
-                <TextView
-                    android:layout_width="100dp"
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:layout_below="@+id/click"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/recycler_view"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Address"
-                    android:textColor="#3c3c3c"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/edit_text_border"
-                    android:hint="Enter your address"
-                    android:paddingLeft="5dp"
-                    android:textColor="#979393"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Need Loaner vehicle ?"
-                    android:textColor="#3c3c3c"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <RadioButton
-                    android:id="@+id/radioButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="15dp"
-                    android:button="@drawable/yes"
-                    android:padding="7dp"
-                    android:text=" Yes"
-                    android:textSize="13sp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:button="@drawable/no"
-                    android:padding="7dp"
-                    android:text="No"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Car Details"
-                    android:textColor="#3c3c3c"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/edit_text_border"
-                    android:paddingLeft="5dp"
-                    android:textColor="#979393"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:gravity="left|center"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Upload your services images"
-                    android:textColor="#3c3c3c"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="40dp"
+                    android:scrollbars="none" />
+                <Button
+                    android:layout_width="210dp"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:padding="5dp"
-                    android:src="@drawable/upload" />
-
+                    android:layout_gravity="center"
+                    android:id="@+id/submit"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/notific"
+                    android:text="BOOK AN APPOINTMENT"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
 
             </LinearLayout>
+        </ScrollView>
 
-            <Button
-                android:layout_width="210dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button"
-                android:text="BOOK AN APPOINTMENT"
-                android:textColor="#ffffff"
-                android:textSize="15sp" />
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 </LinearLayout>
-

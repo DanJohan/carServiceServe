@@ -3,7 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.car.carserviceserve.SplashActivity">
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/white"
+    xmlns:scrolling_image_view="http://schemas.android.com/apk/res-auto"
+    tools:context="com.car.revive.SplashActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/ll1"
+        android:layout_height="wrap_content">
 
+       <com.q42.android.scrollingimageview.ScrollingImageView
+            android:id="@+id/scrolling_background"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            scrolling_image_view:speed="1dp"
+            scrolling_image_view:src="@drawable/shape"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"/>
+
+            />
+
+        <ImageView
+            android:id="@+id/scrolling_foreground"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/revive_car" />
+           />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

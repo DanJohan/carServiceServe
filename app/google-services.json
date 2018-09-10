@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "768016240043",
+    "firebase_url": "https://revive-211305.firebaseio.com",
+    "project_id": "revive-211305",
+    "storage_bucket": "revive-211305.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768016240043:android:7e952a637f354b78",
+        "android_client_info": {
+          "package_name": "com.car.revive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768016240043-q93kj3hf3nlb7kef15mu3vp9oaotpbcb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.car.revive",
+            "certificate_hash": "617e7ab936a94bcf8f55a69c852d39801b6adf97"
+          }
+        },
+        {
+          "client_id": "768016240043-0mvpr6dl32pvrfv1dqnf0vsvqmdjrgs8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVnIYEAtX3yVPa9E9rDpj3uzBzK1k8Ahs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768016240043-0mvpr6dl32pvrfv1dqnf0vsvqmdjrgs8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

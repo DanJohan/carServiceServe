@@ -1,223 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:paddingBottom="5dp"
-    android:weightSum="1">
-
-    <FrameLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:weightSum="1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_weight="0.9"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="0.4"
-        android:background="@drawable/bg_tranparent_image"
-        android:focusable="false">
-
+        android:id="@+id/rel"
+        android:background="@color/white"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
         <ImageView
-            android:id="@+id/img_first"
+            android:id="@+id/maincar"
+            android:layout_marginTop="48dp"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="@drawable/back_image" />
+            android:layout_height="250dp"
+            android:background="@drawable/maincar"/>
+        <Button
+            android:id="@+id/add_car_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/maincar"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/add_car_floating" />
+        <TextView
+            android:layout_below="@id/add_car_btn"
+            android:id="@+id/car_name"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:layout_height="30dp"
+            android:textStyle="bold"
 
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image1"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:backgroundTint="@android:color/white"
-            android:layout_gravity="center|bottom"
-            android:src="@drawable/logo_main_icon"
-            app:civ_border_color="#ffffff"
-            app:civ_border_width="10dp" />
+            android:text="Add Your Car"
+            android:layout_centerHorizontal="true"/>
+        <LinearLayout
+            android:id="@+id/linlay"
+            android:layout_below="@+id/car_name"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:id="@+id/pant_ll1"
+                android:orientation="vertical">
+                <ImageView
+                    android:background="@drawable/shadow"
+                    android:padding="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:src="@drawable/car_repair" />
 
-    </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="top"
+                    android:text="Painting"
+                    android:textStyle="bold"
+                    android:layout_marginTop="-10dp"
+                    android:textColor="@color/dark_pink"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:id="@+id/dant_ll1"
+                android:orientation="vertical">
 
-    <LinearLayout
+                <ImageView
+                    android:background="@drawable/shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:padding="20dp"
+                    android:src="@drawable/icon"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="top"
+                    android:text="Denting"
+                    android:textStyle="bold"
+                    android:layout_marginTop="-10dp"
+                    android:textColor="@color/dark_pink"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_weight="0.1"
+        android:background="@color/white"
+        android:src="@drawable/footer"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.6"
-        android:weightSum="8"
-        android:background="@drawable/bg_tranparent_image"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="150dp"
-            android:orientation="horizontal"
-            android:background="@drawable/service_button"
-            android:layout_height="0dp">
-            <ImageView
-                android:src="@drawable/service"
-                android:padding="5dp"
-                android:layout_width="60dp"
-                android:layout_gravity="center"
-                android:layout_height="30dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:gravity="left|center"
-                android:textSize="12sp"
-                android:textColor="@android:color/white"
-                android:text="Service"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="150dp"
-            android:layout_gravity="end"
-            android:orientation="horizontal"
-            android:background="@drawable/car_loan_button"
-            android:layout_height="0dp">
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:gravity="center|right"
-                android:textSize="12sp"
-                android:textColor="@android:color/white"
-                android:text="Car Loan"/>
-            <ImageView
-                android:padding="5dp"
-                android:src="@drawable/car_loan"
-                android:layout_width="60dp"
-                android:layout_gravity="center"
-                android:layout_height="30dp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="150dp"
-            android:orientation="horizontal"
-            android:background="@drawable/profile_button"
-            android:layout_height="0dp">
-            <ImageView
-                android:src="@drawable/profile"
-                android:layout_width="60dp"
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:layout_height="30dp" />
-            <TextView
-                android:layout_weight="0.9"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:gravity="left|center"
-                android:textSize="12sp"
-                android:textColor="@android:color/white"
-                android:text="Profile"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="150dp"
-            android:layout_gravity="end"
-            android:orientation="horizontal"
-            android:background="@drawable/payment_button"
-            android:layout_height="0dp">
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:gravity="center|right"
-                android:textSize="12sp"
-                android:textColor="@android:color/white"
-                android:text="Payment"/>
-            <ImageView
-                android:padding="5dp"
-                android:src="@drawable/payment"
-                android:layout_width="60dp"
-                android:layout_gravity="center"
-                android:layout_height="30dp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="150dp"
-            android:orientation="horizontal"
-            android:background="@drawable/notification_button"
-            android:layout_height="0dp">
-            <ImageView
-                android:src="@drawable/notifcation"
-                android:layout_width="60dp"
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:layout_height="30dp" />
-            <TextView
-                android:layout_weight="0.9"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:gravity="left|center"
-                android:textSize="12sp"
-                android:textColor="@android:color/white"
-                android:text="Notification"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="150dp"
-            android:layout_gravity="end"
-            android:orientation="horizontal"
-            android:background="@drawable/sell_car_button"
-            android:layout_height="0dp">
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:gravity="center|right"
-                android:textSize="12sp"
-                android:textColor="@android:color/white"
-                android:text="Sell Car"/>
-            <ImageView
-                android:padding="5dp"
-                android:src="@drawable/sell_car"
-                android:layout_width="60dp"
-                android:layout_gravity="center"
-                android:layout_height="30dp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="150dp"
-            android:orientation="horizontal"
-            android:background="@drawable/history"
-            android:layout_height="0dp">
-            <ImageView
-                android:src="@drawable/service"
-                android:layout_width="60dp"
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:layout_height="30dp" />
-            <TextView
-                android:layout_weight="0.9"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:gravity="left|center"
-                android:textSize="12sp"
-                android:textColor="@android:color/white"
-                android:text="History"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="150dp"
-            android:layout_gravity="end"
-            android:orientation="horizontal"
-            android:background="@drawable/special_offer_button"
-            android:layout_height="0dp">
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:gravity="center|right"
-                android:textSize="12sp"
-                android:textScaleX="0.8"
-                android:textColor="@android:color/white"
-                android:text="Special Offers"/>
-            <ImageView
-                android:padding="5dp"
-                android:src="@drawable/special_offer"
-                android:layout_width="60dp"
-                android:layout_gravity="center"
-                android:layout_height="30dp" />
-
-        </LinearLayout>
-    </LinearLayout>
+        android:layout_height="0dp" />
 </LinearLayout>

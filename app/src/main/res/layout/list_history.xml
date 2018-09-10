@@ -1,0 +1,176 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/linear"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="0.45"
+                        android:weightSum="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="0.45"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:text="Order ID:"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="0.55"
+                            android:layout_width="0dp"
+                            android:text="2081897789"
+                            android:layout_gravity="center"
+                            android:textSize="12sp"
+                            android:id="@+id/oid"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="0.55"
+                        android:weightSum="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:text="Booking Date:"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:text="17/07/2018"
+                            android:textSize="12sp"
+                            android:id="@+id/bdate"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:textColor="@color/dark_pink"
+                    android:text="MARUTI SUZUKI ALTO"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:id="@+id/carname"
+                    android:textSize="13sp"
+                    android:layout_height="25dp" />
+                    <Button
+                        android:layout_weight="0.3"
+                        android:layout_width="0dp"
+                        android:background="@drawable/histbutton"
+                        android:text="Pending"
+                        android:textSize="10sp"
+                        android:textColor="@color/dark_pink"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:layout_height="25sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="0.6"
+                        android:weightSum="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:text="Appointment Date:"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="0.4"
+                            android:layout_width="0dp"
+                            android:text="18/07/2018"
+                            android:layout_gravity="center"
+                            android:textSize="12sp"
+                            android:id="@+id/adate"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="0.4"
+                        android:weightSum="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Time:"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:text="04-05 PM"
+                            android:textSize="12sp"
+                            android:id="@+id/time"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"/>
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/histbutton"
+                    android:text="Open Details"
+                    android:textSize="10sp"
+                    android:textColor="@color/dark_pink"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="25sp" />
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dark_pink"/>
+        </LinearLayout>
+</LinearLayout>

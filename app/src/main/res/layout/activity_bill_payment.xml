@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:orientation="horizontal"
+        android:background="@color/dark_pink"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:textColor="@color/white"
+            android:text="Back"
+            android:tint="@color/white"
+            android:id="@+id/back"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+        <TextView
+            android:text="Add Card"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="0.9"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="0dp">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tx1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Add a Card"
+                android:textColor="@color/dark_pink"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tx2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We accept Credit and Debit Cards from Visa, Mastercard, American Express, Rupay,Discover, Diners and Maestro."
+                android:textColor="@color/light_gray"
+                android:textSize="15sp" />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_gray"/>
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name On Card"
+                android:background="@android:color/transparent"
+                android:textColor="@color/light_gray"
+                android:textSize="15sp" />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_gray"/>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/cardno"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Card Number"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/light_gray"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toEndOf="@+id/cardno"
+                    android:text="Bank"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_gray"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:weightSum="1"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:hint="Expiry Date (MM/YY)"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/light_gray"
+                        android:textSize="15sp" />
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/light_gray"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_weight="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:hint="CVV"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/light_gray"
+                        android:textSize="15sp" />
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/light_gray"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Nickname for Card"
+                    android:textColor="@color/light_gray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/notific"
+                    android:text="PERSONAL"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:layout_height="20sp" />
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/notific"
+                    android:text="BUISNESS"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:layout_height="20sp" />
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/notific"
+                    android:text="OTHERS"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:layout_height="20sp" />
+            </LinearLayout>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_gray"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="your card data is saved in a PCI DSS compliant secure vault."
+                    android:textColor="@color/light_gray"
+                    android:textSize="13sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/bank3"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/bank2"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/bank1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <Button
+                android:layout_width="200dp"
+                android:text="Add Card"
+                android:layout_gravity="center"
+                android:background="@drawable/notific"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView
+            android:layout_weight="0.1"
+            android:src="@drawable/footer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+</LinearLayout>
